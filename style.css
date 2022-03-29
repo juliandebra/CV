@@ -152,7 +152,7 @@ html {
     display: flex;
     justify-content: space-around;
     align-items: center;
-   
+    margin-top: 40px;
 }
 .Tech {
     margin-top: 20px;
@@ -294,7 +294,7 @@ html {
 
 /* Media Queries */
 
-@media (min-width: 360px) and (max-width: 480px) {
+@media (min-width: 360px) and (max-width: 1200px) {
     
     body{
         height: 100%;
