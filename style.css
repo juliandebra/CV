@@ -1,16 +1,12 @@
 body {
- 
-    
     text-align: center;
     width: 100%;
     height: 100vh;
     color: #fff;
     background: #050114; 
-   
     background: -webkit-linear-gradient(to right, #5d0aa0, #050114); 
     background: linear-gradient(to right, #5d0aa0, #050114);
-   
-        background-size: 400% 400%;
+    background-size: 400% 400%;
     position: relative;
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
@@ -32,16 +28,12 @@ html {
 
 .Container-Left {
     width: 50%;
-    height: 90vh;
-    
+    height: 90vh; 
     display: flex;
     flex-direction: column;
     margin-top: 10px;
     left: 0;
     z-index: -1;
-  
-   
-    
 }
 
 .Container-Right {
@@ -106,15 +98,68 @@ html {
     justify-content: center;
     align-items: center;
 }
+.Titles{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 .Title{
+    display: inline-block;
+    position: relative;
     font-size: 3.7em;
     text-transform: uppercase;
     letter-spacing: 2px;
     position: relative;
     margin-bottom: 20px;
     white-space: nowrap;
-    transform: translate(-50%, -50%);
+    transition: .5s;
     animation: slideout 1s  both;
+    cursor: pointer;
+}
+.Title:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.Title:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.window {
+    height: 300px;
+    margin-top: 20px;
+    width: 90%;
+    border: 3px solid rgba(255, 255, 255, 0.562);
+    flex-direction: row;
+}
+.About{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    animation: slidein 1s 1s both;
+}
+.About img{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 50%;
+    transition: .5s;
+    filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
+   
+}
+.About h2{
+    font-size: 2.7em;
+}
+.About p{
+    font-size: 2em;
 }
 .Subtitle {
     font-size: 2.5em;
@@ -155,8 +200,8 @@ html {
     margin-top: 40px;
 }
 .Tech {
-    margin-top: 20px;
-    width: 90%;
+    display: none;
+    width: 100%;
 }
 .Tech img{
     width: 100px;
@@ -168,9 +213,16 @@ html {
     transition: .5s;
     filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
     animation: slidein 1s 1s both;
-    
 }
-
+.googlemaps{
+    width: 70px !important;
+}
+.three-js{
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.307)) contrast(0%) !important;
+}
+.react-router-dom{
+    border-radius: 50%;
+}
 .Contact-Button {
     font-size: 2em;
     color: #fff;
@@ -182,6 +234,7 @@ html {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 20px;
     white-space: nowrap;
     transform: translate(-50%, -50%);
     padding: 20px;
@@ -211,7 +264,7 @@ html {
 .Grid-Section {
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px;
     margin-top: 80px;
@@ -220,8 +273,8 @@ html {
 }
 
 .gif-section1 {
-    width: 350px;
-    height: 270px;
+    width: 320px;
+    height: 250px;
     margin-bottom: 20px;
     margin-right: 10px;
     margin-left: 10px;
@@ -272,11 +325,12 @@ html {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 7px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border: 1px solid #fff;
     transition: .5s;
+    cursor: pointer;
 }
 .material-icons:hover{
     border: none;
@@ -293,37 +347,64 @@ html {
     color: #000;
     border-radius: 5px;
 }
-
+.modal{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.732);
+    z-index: 1;
+    animation: slidein 1s .5s both;
+}
+.modal .material-icons{
+    margin: 0;
+    transform: scale(.5)
+}
+.modal p{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+.LibrariesList{
+    font-size: 1.2em;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    text-align: left;
+}
 /* Media Queries */
 
-@media (min-width: 360px) and (max-width: 1200px) {
-    
+@media (min-width: 360px) and (max-width: 760px) {
     body{
         height: 100%;
         overflow: auto;
         background-size: 1000% 1000%;
         background-repeat: no-repeat;
         flex-direction: column;
-        background: -webkit-linear-gradient(to bottom, #5d0aa0, #050114); 
-        background: linear-gradient(to bottom, #5d0aa0, #050114);
     }
 
     .Container-Left{
-        margin-left: 20px;
         width: 100vw;
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
+        z-index: 10;
     }
     .Container-Right{
+        display: block;
         width: 100vw;
-        height: 1100px;
+        height: 1400px;
         position: relative;
-        margin-left: 20px;
         flex-direction: column; 
-        margin-top: 30px;
+        margin-top: 800px;
     }
 
     .Top-Left{
@@ -339,21 +420,19 @@ html {
     .bg-left{
         width: 200px;
         height: 200px;
-        position: absolute;
+        position: relative;
         top: -30px;
     }
     .astronaut{
         width: 200px;
         height: 200px;
-        position: absolute;
-        top: -50px;
-        left: -30px;
+        position: relative;
+        margin-top: 300px;
     }
     .Top-Left{
 
         justify-content: center;
         margin-top: 200px;
-        /* margin-bottom: 40px; */
     }
     .Container-Left-Text{
         width: 100vw;
@@ -363,8 +442,11 @@ html {
         justify-content: center;
         align-items: center;
     }
+    .Titles{
+        flex-direction: column;
+    }
     .Title{
-        font-size: 3em;
+        font-size: 2.5em;
         text-transform: uppercase;
         letter-spacing: 2px;
         text-align: center;
@@ -373,20 +455,19 @@ html {
     }
     
     .Subtitle{
-        font-size: 2.5em;
+        font-size: 2em;
         text-transform: uppercase;
         letter-spacing: 2px;
         text-align: center;
         transform: translate(-50%, -50%);
     }
-    .Tech{
-        flex-direction: row;
-        border: 3px solid rgba(255, 255, 255, 0.562);
-        margin-bottom: 10px
+    .window{
+        height: 750px;
+    }
+    .About{
+        flex-direction: column;
     }
     .Tech img{
-        width: 50px;
-        height: 50px;
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 10px;
@@ -422,11 +503,193 @@ html {
         border: 1px solid rgba(255, 255, 255, 0.562);
         border-radius: 10px;
     }
+    .modal p{
+        font-size: 1.2em;
+    }
 
   }
 
+  @media (min-width: 760px) and (max-width: 1200px) {
+    body{
+        height: 100%;
+        overflow: auto;
+        background-size: 1000% 1000%;
+        background-repeat: no-repeat;
+        flex-direction: column;
+    }
+    .Container-Left{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+    .Container-Right{
+        display: block;
+        width: 100vw;
+        height: 1400px;
+        position: relative;
+        flex-direction: column; 
+        margin-top: 400px;
+    }
 
+    .Top-Left{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .planet2 {
+        width: 400px;
+        left: 0px;
+    }
+    .bg-left{
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+    .astronaut{
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+    .Top-Left{
 
+        justify-content: center;
+        margin-top: 200px;
+    }
+    .Container-Left-Text{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Titles{
+        flex-direction: column;
+    }
+    .Title{
+        font-size: 2.5em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        
+    }
+    
+    .Subtitle{
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    .window{
+        height: 500px;
+    }
+    .About{
+        flex-direction: column;
+    }
+    .Tech img{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: .5s;
+        filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
+        animation: slidein 1s 1s both;
+    }
+    .Section-Title{
+        position: relative;
+
+    }
+    .Grid-Section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+    .gif-section1{
+        
+        width: 300px;
+        height: 230px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        flex-direction: column;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        transition: 1s;
+        animation: slidein 1s 1.6s both;
+        border: 1px solid rgba(255, 255, 255, 0.562);
+        border-radius: 10px;
+    }
+    .modal p{
+        font-size: 1.2em;
+    }
+
+  }
+
+@media (min-width: 1366px) and (max-width: 1919px){
+    body{
+        width: auto;
+    }
+
+    .astronaut{
+        width: 150px;
+        height: 150px;
+    }
+
+    .Title{
+        margin-top: 50px;
+        font-size: 2em;
+    }
+    .Bot-Left{
+        margin-top: 0px;
+    }
+    .About img{
+        align-items: center;
+    }
+    .About p {
+        font-size: 1.8em;
+    }
+    .window{
+        height: 350px;
+    }
+    .Tech img{
+        width: 75px;
+        height: 75px;
+    }
+    .Section-Title{
+        font-size: 1.2em;
+    }
+    .gif-section1{
+        width: 280px;
+        height: 200px;
+    }
+    .Grid-Section{
+        margin-top: 50px;
+    }
+    .Bot-Img{
+        margin-top: 0;
+        
+    }
+    .Bot-Img h2 {
+        font-size: 1.1em;
+        margin-bottom: 0px;
+        text-overflow: ellipsis;
+        height: 30px;
+    }
+    .material-icons{
+        transform: scale(.7) !important;
+    }
+}
 
 /* Animations */
 
