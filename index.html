@@ -40,19 +40,56 @@
             </section>  
         </section>
         <section class="Bot-Left">
-            <h1 class="Title">TECHNOLOGIES</h1>
-            <section class="Tech">
-                <img src="img/html.png" alt="html" class="html">
-                <img src="img/css.png" alt="css" class="css">
-                <img src="img/javascript.png" alt="js" class="js">
-                <img src="img/react.png" alt="react" class="react">
-                <img src="img/redux.png" alt="redux" class="redux">
-                <img src="img/python.png" alt="python" class="python">
-                <img src="img/firebase.png" alt="firebase" class="firebase">
-                <img src="img/node.png" alt="node" class="node">
-                <img src="img/c.png" alt="c" class="c">
-                <img src="img/jira.png" alt="jira" class="jira">
+            <section class="Titles">
+                <h1 class="Title" onclick=aboutModal()>ABOUT ME</h1>
+                <h1 class="Title" onclick=techModal()>TECHNOLOGIES</h1>
+                <h1 class="Title" onclick=librModal()>LIBRARIES</h1>
             </section>
+            <section class="window">
+                <section id="About" class="About">
+                    <section>
+                        <img src="img/ProfileImage.jpg" class="photo" alt=""/>
+                    </section>
+                    <section>
+                        <h2>About Me</h2>
+                        <p>Hi! My name is Julian. I am a Front-End Developer with junior level. 
+                            Since I started programming, I have not stopped learning. 
+                            Every day, I try to improve my skills with React, JS, HTML & CSS. 
+                            At the same time, I am studying the basics with NodeJS, SQL and Python, 
+                            to start integrating the back-end to my projects. 
+                            If you want to know more about my profile, please contact me.
+                        </p>
+                    </section>
+                </section>
+                
+                <section id="Tech" class="Tech">
+                    <img src="img/html.png" alt="html" class="html">
+                    <img src="img/css.png" alt="css" class="css">
+                    <img src="img/javascript.png" alt="js" class="js">
+                    <img src="img/react.png" alt="react" class="react">
+                    <img src="img/firebase.png" alt="firebase" class="firebase">
+                    <img src="img/python.png" alt="python" class="python">
+                    <img src="img/sql.png" alt="sql" class="sql">
+                    <img src="img/node.png" alt="node" class="node">
+                    <img src="img/c.png" alt="c" class="c">
+                    <img src="img/jira.png" alt="jira" class="jira">
+                </section>
+                <section id="Libraries" class="Tech">
+                    <img src="img/formik.png" alt="html" class="formik" title="Formik">
+                    <img src="img/fontawesome.png" alt="fontawesome" class="fontawesome" title="Font Awesome">
+                    <img src="img/bootstrap.png" alt="bootstrap" class="bootstrap" title="React Bootstrap">
+                    <img src="img/MUi.png" alt="MUi" class="MUi" title="Material UI">
+                    <img src="img/googlemaps.png" alt="googlemaps" class="googlemaps" title="Google Maps">
+                    <img src="img/three-js.png" alt="three-js" class="three-js" title="Three.js">
+                    <img src="img/react-router-dom.png" alt="react-router-dom" class="react-router-dom" title="React router dom v6">
+                    <img src="img/jest.png" alt="css" class="jest" title="Jest">
+                    <img src="img/styled.png" alt="js" class="styled" title="Styled Components">
+                    <img src="img/redux.png" alt="redux" class="redux" title="Redux">
+                    <img src="img/axios.png" alt="axios" class="axios" title="Axios">
+                    <img src="img/sweetalert.png" alt="sweetalert" class="sweetalert" title="Sweet Alert 2">
+                </section>
+            </section>
+
           
             <a href="mailto:julian.debra25@gmail.com" style="text-decoration:none" target = "_blank">
                 <button class="Contact-Button">Contact Me</button>
@@ -65,11 +102,62 @@
         <h1 class="Section-Title">Reactjs Projects</h1>
         <section class="Grid-Section">
             <section class="gif-section1">
+                <a href="https://ongsomos-mas.vercel.app/" target="_blank">
+                    <img src="img/Somos Mas - ONG.gif" alt="" class="img1">
+                </a>
+                <section class="Bot-Img">
+                    <h2>Somos más - Alkemy</h2>
+                    <i onclick=openModalOne()  class="material-icons">info</i>
+                    <section id="modal1" class="modal"  >
+                        <i onclick=closeModalOne()  class="material-icons">close</i>
+                        <p>Project made between a few collaborators.
+                        In this site, you can create an account and have access to the backoffice where you can read, 
+                        edit and publish each section of the NGO.
+                        </br>
+                        Libraries used:
+                        </p>
+                        <ul class="LibrariesList">
+                            <li>Formik</li>
+                            <li>CKeditor</li>
+                            <li>Google Maps</li>
+                            <li>Jest</li>
+                            <li>React Router Dom</li>
+                            <li>Mercado Pago</li>
+                            <li>Redux</li>
+                            <li>LeafLet</li>
+                            <li>Sweet Alert 2</li>
+                            <li>Axios</li>
+                        </ul>
+                    </section>
+                    <a href="https://github.com/alkemyTech/OT144-CLIENT" target="_blank">
+                        <i class="material-icons">code</i>
+                    </a>  
+                </section>   
+            </section>
+            <section class="gif-section1">
                 <a href="https://hotelfood.herokuapp.com/" target="_blank">
                     <img src="img/hotelfoodgif.gif" alt="" class="img1">   
                 </a>
                 <section class="Bot-Img">
                     <h2>HotelFood Menues</h2>
+                    <i onclick=openModalTwo()  class="material-icons">info</i>
+                    <section id="modal2" class="modal">
+                        <i onclick=closeModalTwo() class="material-icons">close</i>
+                        <p>Project where you can login with a mocked account. Once you are logged, you can look for a recipe in the search bar.
+                        When you click one recipe you can have a detail of this and have the option to add to your menu.
+                        </br>
+                        Libraries used:
+                        </p>
+                        <ul class="LibrariesList">
+                            <li>Formik</li>
+                            <li>React router dom</li>
+                            <li>Sweet Alert 2</li>
+                            <li>Font Awesome</li>
+                            <li>Styled Components</li>
+                            <li>Axios</li>
+                            <li>React Bootstrap</li>
+                        </ul>
+                    </section>
                     <a href="https://github.com/juliandebra/HotelFood" target="_blank">
                         <i class="material-icons">code</i>
 
@@ -82,6 +170,20 @@
                 </a>
                 <section class="Bot-Img">
                     <h2>Shopping List Cart</h2>
+                    <i onclick=openModalThree()  class="material-icons">info</i>
+                    <section id="modal3" class="modal" >
+                        <i onclick=closeModalThree() class="material-icons">close</i>
+                        <p>Shop cart simulator. You can add or delete a product. 
+                        It shows a total of items and a the total amount of money.
+                        You can reset all the totals with one button.
+                        </br>
+                        Libraries used:
+                        </p>
+                        <ul class="LibrariesList">
+                            <li>Font Awesome</li>
+                            <li>React Bootstrap</li>
+                        </ul>
+                    </section>
                     <a href="https://github.com/juliandebra/Cart-" target="_blank">
                         <i class="material-icons">code</i>
                     </a>  
@@ -93,6 +195,20 @@
                 </a>
                 <section class="Bot-Img">
                     <h2>Credit Simulator</h2>
+                    <i onclick=openModalFour()  class="material-icons">info</i>
+                    <section id="modal4" class="modal" >
+                        <i onclick=closeModalFour() class="material-icons">close</i>
+                        <p>
+                            Credit simulator. It contains two slides of Material UI, 
+                            where you can calculate the amount you need per month.
+                            </br>
+                            Libraries used:
+                        </p>
+                        <ul class="LibrariesList">
+                            <li>Material UI</li>
+                            <li>React Bootstrap</li>
+                        </ul>
+                    </section>
                     <a href="https://github.com/juliandebra/creditsimulator" target="_blank">
                         <i class="material-icons">code</i>
                     </a>  
@@ -107,4 +223,5 @@
             </section>
         </section>
     </section>
+    <script src="index.js"></script>
 </body>
