@@ -168,7 +168,9 @@ html {
     transition: .5s;
     filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
     animation: slidein 1s 1s both;
+    
 }
+
 .Contact-Button {
     font-size: 2em;
     color: #fff;
