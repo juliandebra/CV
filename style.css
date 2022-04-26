@@ -199,11 +199,22 @@ html {
     align-items: center;
     margin-top: 40px;
 }
-.Tech {
+.Tech .Libraries{
     display: none;
     width: 100%;
 }
 .Tech img{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: .5s;
+    filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.5));
+    animation: slidein 1s 1s both;
+}
+.Libraries img{
     width: 100px;
     height: 100px;
     margin-left: 20px;
@@ -636,7 +647,7 @@ html {
 
   }
 
-@media (min-width: 1366px) and (max-width: 1919px){
+@media (min-width: 1366px) and (max-width: 1638px){
     body{
         width: auto;
     }
@@ -688,6 +699,65 @@ html {
     }
     .material-icons{
         transform: scale(.7) !important;
+    }
+}
+
+@media (min-width: 1366px) and (min-height: 640px) {
+    .Title{
+        font-size: 2em;
+        margin-top: 30px;
+    }
+    .Subtitle{
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
+    .window{
+        height: 230px;
+    }
+    .About{
+        margin-top: 10px;
+    }
+    .About h2{
+        font-size: 1.7em;
+    }
+    .About p{
+        font-size: 1.5em;
+    }
+    .photo{
+        width: 150px;
+        height: 150px;
+    }
+    .Tech {
+        margin-top: 0px;
+    }
+    .Libraries img{
+        width: 50px;
+        height: 50px;
+    }
+    .googlemaps{
+        width: 40px !important;
+        height: 50px;
+    }
+    .gif-section1{
+        width: 240px;
+        height: 160px;
+    }
+    .img1{
+        width: 240px;
+        height: 120px;
+    }
+    .material-icons{
+        transform: scale(.4) !important;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .modal p{
+        margin-top: -12px !important;
+        font-size: 1em;
+        margin: 0px;
+    }
+    .modal ul{
+        font-size: .8em;
     }
 }
 
