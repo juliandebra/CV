@@ -23,7 +23,14 @@ function librModal(){
     libraries.style.display = 'block'
 }
 
-
+function openModalOne(id) {
+    let modal = document.getElementById(id);
+    modal.style.display = "block";
+}
+function closeModalOne(id) {
+    let modal = document.getElementById(id);
+    modal.style.display = "none";
+}
 function openModalOne() {
     let modal = document.getElementById("modal1");
     modal.style.display = "block";
@@ -40,6 +47,10 @@ function openModalFour() {
     let modal = document.getElementById("modal4");
     modal.style.display = "block";
 }
+function openModalFive() {
+    let modal = document.getElementById("modal5");
+    modal.style.display = "block";
+}
 function closeModalOne() {
     let modal = document.getElementById("modal1");
     modal.style.display = "none";
@@ -54,5 +65,9 @@ function closeModalThree() {
 }
 function closeModalFour() {
     let modal = document.getElementById("modal4");
+    modal.style.display = "none";
+}
+function closeModalFive() {
+    let modal = document.getElementById("modal5");
     modal.style.display = "none";
 }
